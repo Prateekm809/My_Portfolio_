@@ -820,7 +820,9 @@ box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900) !important;
 
   }
  #card2,#card3,#card4{
-  height: 200px;
+    height: 200px;
+  width: 100%;
+  margin: 5px;
  }
  
   .txt{
