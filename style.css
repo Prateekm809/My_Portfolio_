@@ -798,7 +798,7 @@ box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900) !important;
 
 @media only screen and (max-width: 768px) {
   #navbar {
-      height: 10vh;
+      height: 9vh;
       width: 100vw;
   }
   #hamburger{
@@ -819,6 +819,13 @@ box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900) !important;
     margin-top: 15vh;
 
   }
+ #card2,#card3,#card4{
+  height: 200px;
+ }
+ 
+  .txt{
+    font-size: 1em;
+  }
 
   .cert{
     width: 80vw;
@@ -837,7 +844,7 @@ box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900) !important;
     text-align: center;
   }
   .page:not(.home) {
-    margin-top: 10vh;
+    margin-top: 11vh;
   }
 }
 
