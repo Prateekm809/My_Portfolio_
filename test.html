@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    .project_images {
+      display: flex;
+      overflow: hidden;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    .card {
+      flex: 0 0 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .background-image {
+      height: 200px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    @media (min-width: 576px) {
+      .card {
+        flex: 0 0 50%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        flex: 0 0 33.33%;
+      }
+    }
+
+    @media (min-width: 992px) {
+      .card {
+        flex: 0 0 25%;
+      }
+    }
+
+    @media (min-width: 1200px) {
+      .card {
+        flex: 0 0 20%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="project_images">
+  <div class="card" id="card1">
+    <div class="background-image" style="background-image: url('image/project/project1.png');"></div>
+    <h2 class="name">Learn with Fun</h2>
+    <p class="name">HomePage Of the Website</p>
+  </div>
+
+  <div class="card" id="card2">
+    <div class="background-image" style="background-image: url('image/project/project2.png');"></div>
+    <h2 class="name">Learn with Fun</h2>
+    <p class="name">Student Dashboard</p>
+  </div>
+
+  <div class="card" id="card3">
+    <div class="background-image" style="background-image: url('image/project/project3.png');"></div>
+    <h2 class="name">ElevateX Sports</h2>
+    <p class="name">User Homepage</p>
+  </div>
+</div>
+
+<script>
+  let currentIndex = 0;
+  const cards = document.querySelectorAll('.card');
+
+  function showCard(index) {
+    cards.forEach((card, i) => {
+      card.style.transform = `translateX(-${index * 100}%)`;
+    });
+  }
+
+  function nextCard() {
+    currentIndex = (currentIndex + 1) % cards.length;
+    showCard(currentIndex);
+  }
+
+  function prevCard() {
+    currentIndex = (currentIndex - 1 + cards.length) % cards.length;
+    showCard(currentIndex);
+  }
+
+  setInterval(nextCard, 3000); // Auto slide every 3 seconds
+</script>
+
+</body>
+</html>
