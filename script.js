@@ -124,7 +124,7 @@
     
       if (currentScrollPos > prevScrollPos) {
           // Scrolling down
-          navbar.style.top = "-80px"; // Adjust this value based on your design
+          navbar.style.top = "-80px"; 
       } else {
           // Scrolling up
           navbar.style.top = "0";
@@ -133,12 +133,12 @@
       prevScrollPos = currentScrollPos;
   }
   
-  // Call adjustNavbar when the window is fully loaded
+
   window.onload = function () {
       adjustNavbar();
   };
   
-  // Also, add an event listener for the scroll event to update the navbar dynamically
+  
   window.onscroll = function () {
       adjustNavbar();
   };
@@ -146,12 +146,11 @@
   
 
   document.addEventListener("DOMContentLoaded", function () {
-    // Initially hide all content sections except the home page
+
     document.querySelectorAll('.page:not(#home)').forEach(page => {
       page.classList.add('hide');
     });
-  
-    // Add click event listeners to navigation items
+
     document.querySelectorAll('.item').forEach(item => {
       item.addEventListener('click', function (event) {
         event.preventDefault();
@@ -159,8 +158,7 @@
         changePage(targetPageId);
       });
     });
-  
-    // Add click event listener to the home logo and "Home" link
+
     document.getElementById('logo').addEventListener('click', function (event) {
       event.preventDefault();
       changePage('home');
@@ -173,25 +171,22 @@
   });
   
   function changePage(pageId) {
-    // Hide all pages
     document.querySelectorAll('.page').forEach(page => {
       page.classList.remove('show');
       page.classList.add('hide');
     });
   
-    // Display the selected page with enter animation
+
     const selectedPage = document.getElementById(pageId);
     selectedPage.classList.remove('hide');
-    selectedPage.classList.add('show');
+    selectedPage.classList.add('show', 'animate__animated', 'animate__bounceInUp');
   }
-  // , 'animate__animated', 'animate__bounceInUp'
+ 
 
-document.addEventListener("DOMContentLoaded", function () {
-    // Simulate a delay for demonstration purposes (remove this in production)
-    setTimeout(function () {
-        document.getElementById("loader-container").style.display = "none";
-    }, 1000); // 2000 milliseconds (2 seconds), adjust as needed
+  window.addEventListener("load", function () {
+    document.getElementById("loader-container").style.display = "none";
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
   const images = document.querySelectorAll('.title,.cert,.skill,.name');
@@ -237,23 +232,18 @@ window.addEventListener("scroll", updateGlowPosition);
 
 const scrollers = document.querySelectorAll(".scroller");
 
-// If a user hasn't opted in for recuded motion, then we add the animation
+
 if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
   addAnimation();
 }
 
 function addAnimation() {
   scrollers.forEach((scroller) => {
-    // add data-animated="true" to every `.scroller` on the page
+
     scroller.setAttribute("data-animated", true);
 
-    // Make an array from the elements within `.scroller-inner`
     const scrollerInner = scroller.querySelector(".scroller__inner");
     const scrollerContent = Array.from(scrollerInner.children);
-
-    // For each item in the array, clone it
-    // add aria-hidden to it
-    // add it into the `.scroller-inner`
     scrollerContent.forEach((item) => {
       const duplicatedItem = item.cloneNode(true);
       duplicatedItem.setAttribute("aria-hidden", true);
@@ -286,22 +276,28 @@ function handleMouseLeave() {
   this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.3)';
 }
 
-// document.getElementById('hamburger').addEventListener('click', function() {
-//   document.querySelector('#navbar ul').classList.toggle('show');
-//   document.querySelector('#sidebar').style.left =
-//       document.querySelector('#sidebar').style.left === "0%" ? "-70%" : "0%";
-// });
+
 document.getElementById('hamburger').addEventListener('click', function() {
   document.querySelector('#navbar ul').classList.toggle('show');
-  document.querySelector('#sidebar').classList.toggle('show'); // Toggle the 'show' class
+  document.querySelector('#sidebar').classList.toggle('show'); 
 });
 
-// Add an event listener to each sidebar menu item
 document.querySelectorAll('#navbar .side a').forEach(function(item) {
   item.addEventListener('click', function() {
-    // Hide the sidebar when a menu item is clicked
     document.querySelector('#sidebar').classList.remove('show');
     document.querySelector('#navbar ul').classList.remove('show');
+    document.querySelector('a').classList.add('clicked');
     
   });
 });
+
+document.querySelectorAll('nav ul li ').forEach(function(li) {
+  li.addEventListener('click', function() {
+    document.querySelectorAll('nav ul li').forEach(function(item) {
+      item.classList.remove('working');
+    });
+    document.querySelector('a').classList.add('clicked');
+    li.classList.add('working');
+  });
+});
+
