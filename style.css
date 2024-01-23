@@ -34,7 +34,13 @@ body {
   z-index: 100;
 }
 
-
+.name a{
+  color: #c6c2c2;
+  
+}
+.name a:hover{
+  color: #fccb06;
+}
 .hi{
     font-size: 100px;
     text-align: center;
@@ -249,8 +255,8 @@ nav a {
 }
 #img {
   display: flex;
-  height: 190px;
-  width: 130px;
+  height: 170px;
+  width: 110px;
   border-radius: 70px;
   margin: 0 auto;
   z-index: 5;
@@ -889,5 +895,10 @@ box-shadow: 0 0.5rem 1rem -0.25rem var(--clr-primary-900) !important;
     margin-left: 0;
     margin-right: 0;
   }
+  .home{
+    margin-bottom: 10vh;
+    height: auto;
+  }
+
 }
 
