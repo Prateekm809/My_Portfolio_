@@ -91,37 +91,23 @@
     .move(7)
     .go();
   
-    window.onscroll = function() {scrollFunction()};
 
-    function adjustNavbar() {
-      var navbar = document.getElementById("navbar");
-      var logo = document.getElementById("logo");
   
-      if (window.scrollY > 80) {
-          navbar.style.padding = "30px 0";
-          logo.style.fontSize = "25px";
-      } else {
-          navbar.style.padding = "45px 0";
-          logo.style.fontSize = "35px";
-      }
-  }
-  
-  var prevScrollPos = window.pageYOffset;
+  var prevScrollPos = window.scrollY || window.pageYOffset;
 
   function adjustNavbar() {
-      var currentScrollPos = window.pageYOffset;
+      var currentScrollPos = window.scrollY || window.pageYOffset;
       var navbar = document.getElementById("navbar");
       var logo = document.getElementById("logo");
   
       if (currentScrollPos > 80) {
-          navbar.style.padding = "30px 0";
-          logo.style.fontSize = "25px";
+          navbar.style.padding = "5vh 0";
+          logo.style.fontSize = "30px";
       } else {
-          navbar.style.padding = "45px 0";
+          navbar.style.padding = "6vh 0";
           logo.style.fontSize = "35px";
       }
   
-    
       if (currentScrollPos > prevScrollPos) {
           // Scrolling down
           navbar.style.top = "-80px"; 
@@ -133,15 +119,14 @@
       prevScrollPos = currentScrollPos;
   }
   
-
   window.onload = function () {
       adjustNavbar();
   };
   
-  
   window.onscroll = function () {
       adjustNavbar();
   };
+  
 
   
 
@@ -301,3 +286,47 @@ document.querySelectorAll('nav ul li ').forEach(function(li) {
   });
 });
 
+
+
+  function updateProgressBar(skillId, progress, fillColor) {
+    var progressBar = document.getElementById(skillId + "-progress");
+    var progressFill = document.getElementById(skillId + "-fill");
+    var skillPercentage = document.getElementById(skillId + "-skill");
+
+    // Set the width of the fill element based on the progress percentage
+    progressFill.style.width = progress + "%";
+
+    // Update the text content to display the current percentage
+    skillPercentage.textContent = progress;
+
+    // Change the fill color if provided
+    if (fillColor) {
+      progressFill.style.backgroundColor = fillColor;
+    }
+  }
+
+  updateProgressBar("frontend", 80, "rgb(35, 87, 111)");
+  updateProgressBar("js", 80, "rgb(35, 87, 111)");
+  updateProgressBar("jest", 70, "rgb(35, 87, 111)");
+  updateProgressBar("git", 70, "rgb(35, 87, 111)");
+  updateProgressBar("Ahtml", 70, "rgb(35, 87, 111)");
+  updateProgressBar("SASS", 70, "rgb(35, 87, 111)");
+  updateProgressBar("CSS-Flex", 90, "rgb(35, 87, 111)");
+  updateProgressBar("Grid", 80, "rgb(35, 87, 111)");
+  updateProgressBar("JSX", 80, "rgb(35, 87, 111)");
+  updateProgressBar("DM", 70, "rgb(35, 87, 111)");
+  updateProgressBar("FC", 75, "rgb(35, 87, 111)");
+  updateProgressBar("RN", 70, "rgb(35, 87, 111)");
+  updateProgressBar("SME", 75, "rgb(35, 87, 111)");
+  updateProgressBar("ASDH", 80, "rgb(35, 87, 111)");
+  updateProgressBar("PAT", 90, "rgb(35, 87, 111)");
+  updateProgressBar("DT", 80, "rgb(35, 87, 111)");
+  updateProgressBar("CD", 70, "rgb(35, 87, 111)");
+  updateProgressBar("UX", 90, "rgb(35, 87, 111)");
+  updateProgressBar("FDS", 80, "rgb(35, 87, 111)");
+  updateProgressBar("IST", 90, "rgb(35, 87, 111)");
+  updateProgressBar("Algo", 70, "rgb(35, 87, 111)");
+  updateProgressBar("DA", 90, "rgb(35, 87, 111)");
+  updateProgressBar("DV", 90, "rgb(35, 87, 111)");
+  updateProgressBar("ML", 80, "rgb(35, 87, 111)");
+  updateProgressBar("SK", 80, "rgb(35, 87, 111)");

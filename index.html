@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link
     rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+      <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
     <link rel="icon" href="image/FEVICON/fevicon.png" type="image/x-icon">
     <meta name="theme-color" content="#fccb06">
 </head>
@@ -57,7 +58,12 @@
     <div id="content-container">
         <!-- Home Page -->
         <div id="home" class="page home">
+          <section class="blobs">
+         
             <div id="first">
+            
+
+              
                 <div class="left">
                     <div class="project_images" style="margin-left: 10vw; ">
                       <div class="card-container">
@@ -66,6 +72,7 @@
                           <div style=" position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5);"></div>
                           <div class="content">
                             <img src="image/Prateek.png" id="img" alt="">
+                            
                             <h2 class="name">Prateek Mishra</h2>
                             <p class="name" >Full Stack Web Developer</p>
                             <h2 class="name"><a href="image/My resume.pdf" target="_blank">Download CV</a></h2>
@@ -79,6 +86,7 @@
                 </div>
                     </div>
                 </div>
+            
                 <div class="right">
                     <h1 class="hi"><span id="element">Hello</span></h1>
                     <span id="element"></span>
@@ -91,21 +99,49 @@
             </div>
         </div>
 
+    
+    </section>
+      
 <main>
     <div id="projects" class="page">
+      <section class="moving-blob">
+
+
+        <svg class="blob-motion" id="visual" viewBox="0 0 960 540" width="960" height="540"
+          xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+          <g transform="translate(443.1486719877639 291.88562398203584)">
+            <path id="blob1"
+              d="M120 -113.6C153.8 -86.3 178.1 -43.1 169.6 -8.5C161.2 26.2 119.8 52.3 86.1 70.8C52.3 89.3 26.2 100.2 -2.6 102.8C-31.3 105.3 -62.7 99.7 -79.6 81.2C-96.5 62.7 -98.9 31.3 -97.1 1.8C-95.3 -27.8 -89.4 -55.6 -72.5 -83C-55.6 -110.3 -27.8 -137.1 7.7 -144.8C43.1 -152.5 86.3 -140.9 120 -113.6"
+              fill="#e3dc36"></path>
+          </g>
+          <g transform="translate(503.02025628626694 245.48912845258224)" style="visibility: hidden">
+            <path id="blob2"
+              d="M89.7 -84.8C111.5 -67.9 121.3 -33.9 124.9 3.7C128.6 41.2 126.2 82.5 104.3 113.5C82.5 144.5 41.2 165.2 5.3 159.9C-30.6 154.6 -61.3 123.3 -95 92.3C-128.8 61.3 -165.6 30.6 -171.5 -5.9C-177.4 -42.4 -152.4 -84.9 -118.6 -101.7C-84.9 -118.6 -42.4 -109.9 -4.2 -105.7C33.9 -101.4 67.9 -101.6 89.7 -84.8"
+              fill="#e3dc36"></path>
+          </g>
+        </svg>
+    
+        <script>
+          const tween = KUTE.fromTo(
+            '#blob1',
+            { path: '#blob1' },
+            { path: '#blob2' },
+            { repeat: 999, duration: 3000, yoyo: true }
+          ).start();
+        </script>
         <h2 class="title1">Projects</h2>
         <div class="project">
         <h3 class="title2 title">E-Learning Website: LEARN WITH FUN</h3>
         
-        <p>Passionate about sparking engagement in online learning, I spearheaded the development of a dynamic e-learning website that seamlessly blends education with engaging elements. Built upon a robust foundation of HTML, CSS, and JavaScript, the website boasts a user-friendly interface and interactive features powered by PHP and MySQL. Key highlights include:</p>
+        <p class="normal-text">Passionate about sparking engagement in online learning, I spearheaded the development of a dynamic e-learning website that seamlessly blends education with engaging elements. Built upon a robust foundation of HTML, CSS, and JavaScript, the website boasts a user-friendly interface and interactive features powered by PHP and MySQL. Key highlights include:</p>
         
-        <ul>
+        <ul class="normal-text">
         <li>Effective integration of gamified elements to promote motivation and knowledge retention.</li>
         <li>Seamless user experience with intuitive navigation and interactive feedback mechanisms.</li>
         <li>Successful implementation of a comprehensive backend system for managing content, user accounts, and progress tracking.</li>
         </ul>
         
-        <p>This project showcased my proficiency in web development technologies and my commitment to crafting engaging learning experiences.</p>
+        <p class="normal-text">This project showcased my proficiency in web development technologies and my commitment to crafting engaging learning experiences.</p>
         
        
 
@@ -206,12 +242,12 @@
             </div>
             <div class="project">
                 <h3 class="title2 title" >Sports Website: ElevateX sports</h3>
-                <p>Elevating the way athletes train and compete, I led the development of the backend system for "Elevate" - an e-sports health and nutrition website powered by Django. Moving beyond my previous PHP experience, I embraced the robust framework to implement a secure, scalable, and feature-rich backend. This involved:</p>
+                <p class="normal-text">Elevating the way athletes train and compete, I led the development of the backend system for "Elevate" - an e-sports health and nutrition website powered by Django. Moving beyond my previous PHP experience, I embraced the robust framework to implement a secure, scalable, and feature-rich backend. This involved:</p>
     
-            <p> a user dashboard for the Elevate e-sports health and nutrition website, built to empower athletes to optimize their training and performance. This feature-rich dashboard, crafted using Django and vanilla JavaScript, goes beyond simply tracking data it provides a visually engaging and interactive experience to help users stay motivated and informed.</p>
+            <p class="normal-text"> a user dashboard for the Elevate e-sports health and nutrition website, built to empower athletes to optimize their training and performance. This feature-rich dashboard, crafted using Django and vanilla JavaScript, goes beyond simply tracking data it provides a visually engaging and interactive experience to help users stay motivated and informed.</p>
     
-            <ul>
-                <h3> Exercise Tracking and Completion:</h3>
+            <ul class="normal-text">
+                <h3 class="normal-text"> Exercise Tracking and Completion:</h3>
                 <li>View a clear list of planned exercise with intuitive navigation and interactive feedback mechanisms.</li>
                 <li>Mark exercises as completed with a simple click, updating the dashboard dynamically to reflect progress.</li>
                 <li>Track the total number of completed exercises, adding a sense of accomplishment and motivation. </li>
@@ -228,47 +264,67 @@
         </div>
     </div>
     <div id="education" class="page">
+      <section class="blobbs">
+         
         <div  class="education">
-            <h3  class="title" data-image="image/adit.jpeg" > <img src="image/dgt.png" alt=""><br> Advance Diploma in IT Networking and Cloud Computing</h3>
-            <p>Hardware and Networking</p>
-            <p>HTML CSS JAVASCRIPT</p>
-            <p>PHP MYSQL LARAVEL</p>
-            <p>FLASK DJANGO</p>
-            <p>Data Analytics with Machine learning</p>
-            <h3 class="title"> <img width="60" height="60" src="https://img.icons8.com/papercut/60/university.png" alt="university"/>Bachelor of Science</h3>
-            <p>C++</p>
-            <p>Python</p> 
-            <p>physics</p>
-            <p>Mathematics</p>
-            <h3 class="title" > <img width="48" height="48" src="https://img.icons8.com/emoji/48/school-emoji.png" alt="school-emoji"/>higher secondary</h3>
-            <p>physics</p>
-            <p>Chemistry</p>
-            <p>Mathematics</p>
-            <h3 class="title" > <img width="50" height="50" src="https://img.icons8.com/bubbles/50/school.png" alt="school"/>Secondary</h3>
-            <p>science</p>
-            <p>mathematics</p>
+          <h3 class="title" data-image="image/adit.jpeg">
+            <img src="image/dgt.png" alt=""><br> 
+            Advance Diploma in IT Networking and Cloud Computing
+        </h3>
+        <p class="normal-text">Hardware and Networking</p>
+        <p class="normal-text">HTML CSS JAVASCRIPT</p>
+        <p class="normal-text">PHP MYSQL LARAVEL</p>
+        <p class="normal-text">FLASK DJANGO</p>
+        <p class="normal-text">Data Analytics with Machine learning</p>
+        
+        <h3 class="title">
+            <img width="60" height="60" src="https://img.icons8.com/papercut/60/university.png" alt="university"/>
+            Bachelor of Science
+        </h3>
+        <p class="normal-text">C++</p>
+        <p class="normal-text">Python</p> 
+        <p class="normal-text">Physics</p>
+        <p class="normal-text">Mathematics</p>
+        
+        <h3 class="title">
+            <img width="48" height="48" src="https://img.icons8.com/emoji/48/school-emoji.png" alt="school-emoji"/>
+            Higher Secondary
+        </h3>
+        <p class="normal-text">Physics</p>
+        <p class="normal-text">Chemistry</p>
+        <p class="normal-text">Mathematics</p>
+        
+        <h3 class="title">
+            <img width="50" height="50" src="https://img.icons8.com/bubbles/50/school.png" alt="school"/>
+            Secondary
+        </h3>
+        <p class="normal-text">Science</p>
+        <p class="normal-text">Mathematics</p>
+        
 
         </div>
+      </section>
         </div>
         <div id="experience" class="page">
-        <div class="experience">
-            <h3 class="title"  data-image="image/cyber.png">Cybersecurity Internship</h3>
-            <img src="image/cyber.png" alt="" class="cert" >
-            <p>I successfully completed a 2-month cybersecurity internship where I delved into the fundamentals of this dynamic and critical field. Throughout the program, I acquired comprehensive knowledge and hands-on experience in various aspects of cybersecurity.</p>
+          <section class="blobs">
+          <div class="experience">
+            <h3 class="title" data-image="image/cyber.png">Cybersecurity Internship</h3>
+            <img src="image/cyber.png" alt="" class="cert">
+            <p class="exp">I completed a 2-month cybersecurity internship, gaining hands-on experience and foundational knowledge.</p>
         
-            <p>During this internship, I:</p>
-            <ul>
-                <li>Explored the foundations of cybersecurity, including key concepts and principles.</li>
-                <li>Gained practical experience in implementing security measures to protect against potential threats.</li>
-                <li>Participated in hands-on exercises and simulations to enhance my skills in identifying and mitigating security risks.</li>
-                <li>Collaborated with a team of professionals, fostering a dynamic learning environment and gaining insights into real-world cybersecurity challenges.</li>
+            <p class="name" >Highlights:</p>
+            <ul class=exp>
+                <li>Explored cybersecurity concepts and principles.</li>
+                <li>Gained practical experience in security implementation.</li>
+                <li>Participated in simulations and collaborated with professionals.</li>
             </ul>
         
-            <p>This invaluable experience has not only equipped me with a strong understanding of cybersecurity fundamentals but has also honed my problem-solving and analytical skills. I am excited to leverage this knowledge in future endeavors and contribute to the ever-evolving field of cybersecurity.</p>
-            
+            <p>This experience enhanced my problem-solving skills and equipped me to contribute effectively to cybersecurity.</p>
         </div>
+          </section>
         </div>
         <div id="certifications" class="page">
+          <section class="blobs1">
         <div class="Certifications">
             <h1 class="Main_title">Certifications</h1>
             <h3 class="title meta" data-image="image/Meta.png" ><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
@@ -285,6 +341,9 @@
               </div>
           </div>
           <p class="skill">I am thrilled to have completed the Meta Front-End Developer Professional Certificate, a comprehensive program covering a wide range of essential topics in front-end development. This certificate includes the following courses:</p>
+        </section>
+
+        <section class="blobs3">
             <ul>
                 <li>
                   <div class="title details" data-image="image/meta1.png">
@@ -302,14 +361,21 @@
               </div>
                   
                   <dl class="skills-list skill">
-                    <p>Gained foundational knowledge and understanding of front-end development principles. </p>
-                    <dd>Front-End Development Principles</dd>
+                    <section class="skills">
+                      <p style="text-align: center;">Front-End Development Principles <span id="frontend-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="frontend-progress">
+                          <div class="progress-fill" id="frontend-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
               
             </ul>
-         
-                <li>
+    
+
+                
                   <div class="title details" data-image="image/meta1.png">
                     <img src="image/js.gif" alt="JavaScript"/>
                     <span>Programming with JavaScript:</span>
@@ -324,17 +390,27 @@
                     </div>
                 </div>
             </div>
-                  
+          </section>
                   <dl class="skills-list skill">
-                    <p>Developed proficiency in JavaScript programming, a key language for front-end development.</p>
-                    <dd>Basic</dd>
-                    <dd>Testing</dd>
-                    <dd>Jest</dd>
-                    <dd>Node.js</dd>
+                    <section class="skills">
+                      <p style="text-align: center;">Vanilla JavaScript <span id="js-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="js-progress">
+                          <div class="progress-fill" id="js-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Testing using Jest <span id="jest-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="jest-progress">
+                          <div class="progress-fill" id="jest-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
-                </li>
-              
-                <li>
+                </section>
+                <section class="blobs1">
                   <div class="title details" data-image="image/meta1.png">
                     <img src="image/git.gif" alt="Version Control"/>
                     <span>Version Control:</span>
@@ -349,11 +425,16 @@
                     </div>
                 </div>
             </div>
-                  <dl class="skills-list skill">
-                    <p>Explored version control systems, essential for collaborative coding and project management. Familiarity with version control systems, such as Git, and the ability to collaborate on projects using repositories.</p>
-                    <dd>Git Bash</dd>
-                    <dd>Github</dd>
-                  </dl>
+            <dl class="skills-list skill">
+            <section class="skills">
+              <p style="text-align: center;">Version control <span id="git-skill">0</span>%</p>
+              <div class="progress-container">
+                <div class="progress-bar" id="git-progress">
+                  <div class="progress-fill" id="git-fill"></div>
+                </div>
+              </div>
+            </section>
+            </dl>
                 </li>
               
                 <li>
@@ -373,14 +454,41 @@
             </div>
                   <p class="skill">Dived into the intricacies of HTML and CSS, mastering the building blocks of web development. In-depth knowledge of HTML and CSS, including semantic HTML, responsive design, and styling techniques.</p>
                   <dl class="skills-list skill">
-                    <dd>Semantic HTML</dd>
-                    <dd>SASS</dd>
-                    <dd>CSS Flexbox</dd>
-                    <dd>CSS Grid</dd>
-                    <dd>aria-labels</dd>
+                    <section class="skills">
+                      <p style="text-align: center;">Advance HTML topics with aria labels for SEO <span id="Ahtml-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="Ahtml-progress">
+                          <div class="progress-fill" id="Ahtml-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">SASS <span id="SASS-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="SASS-progress">
+                          <div class="progress-fill" id="SASS-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">CSS Flexbox <span id="CSS-Flex-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="CSS-Flex-progress">
+                          <div class="progress-fill" id="CSS-Flex-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">CSS-Grid <span id="Grid-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="Grid-progress">
+                          <div class="progress-fill" id="Grid-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
-              
+              </section> 
                 <li>
                   <div class="title details" data-aos="image/meta5.png">
                     <img src="image/react.gif" alt="React Basics"/>
@@ -398,29 +506,41 @@
             </div>
                   <p class="skill">Learned the fundamentals of React, a popular JavaScript library for building user interfaces. Understanding of React.js and the ability to build interactive user interfaces using components and state management.</p>
                   <dl class="skills-list">
-                    <dt>1. JSX (JavaScript XML)</dt>
-                    <dd>JavaScript syntax extension used with React to describe what the UI should look like.</dd>
-                    <dt>2. Components</dt>
-                    <dd>Reusable, independent pieces of UI that can be composed to build complex interfaces.</dd>
-                    <dt>3. State and Props</dt>
-                    <dd>State represents the internal data of a component, while props are used to pass data to a component.</dd>
-                    <dt>4. Lifecycle Methods</dt>
-                    <dd>Methods that are called at different stages in the life of a component (e.g., mounting, updating, unmounting).</dd>
-                    <dt>5. Hooks</dt>
-                    <dd>Functions that let you use state and other React features in functional components.</dd>
-                    <dt>6. Event Handling</dt>
-                    <dd>Handling user interactions such as clicks and input changes.</dd>
-                    <dt>7. Conditional Rendering</dt>
-                    <dd>Rendering different content based on certain conditions.</dd>
-                    <dt>8. Lists and Keys</dt>
-                    <dd>Rendering lists of data efficiently with unique keys for each item.</dd>
-                    <dt>9. Forms in React</dt>
-                    <dd>Working with forms and handling form submissions.</dd>
-                    <dt>10. React Router</dt>
-                    <dd>Enabling navigation and routing in React applications.</dd>
+                    <section class="skills">
+                      <p style="text-align: center;">JSX (JavaScript XML)<span id="JSX-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="JSX-progress">
+                          <div class="progress-fill" id="JSX-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Rendering and Navigation <span id="RN-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="RN-progress">
+                          <div class="progress-fill" id="RN-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Data Management in React <span id="DM-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="DM-progress">
+                          <div class="progress-fill" id="DM-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Functional Components and Interactions<span id="FC-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="FC-progress">
+                          <div class="progress-fill" id="FC-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
-              
+               
                 <li>
                   <div class="title details" data-image="image/meta1.png">
                     <img src="image/react2.gif" alt="Advanced React"/>
@@ -439,26 +559,30 @@
             </div>
                   <p class="skill">Explored advanced concepts and techniques in React development. Advanced concepts in React development, including hooks, context, and more sophisticated state management.</p>
                   <dl class="skills-list">
-                    <dt>1. Higher-Order Components (HOC)</dt>
-                    <dd>A pattern where a function takes a component and returns a new component with enhanced features.</dd>
-                    <dt>2. Render Props</dt>
-                    <dd>A technique for sharing code between React components using a prop whose value is a function.</dd>
-                    <dt>3. Context API</dt>
-                    <dd>A way to pass data through the component tree without having to pass props down manually.</dd>
-                    <dt>4. Redux</dt>
-                    <dd>A predictable state container for JavaScript apps, commonly used with React for managing global state.</dd>
-                    <dt>5. GraphQL with React</dt>
-                    <dd>Using GraphQL as a data query language to fetch and manage data in React applications.</dd>
-                    <dt>6. Server-Side Rendering (SSR)</dt>
-                    <dd>Rendering React components on the server instead of the browser for improved performance and SEO.</dd>
-                    <dt>7. Progressive Web Apps (PWA)</dt>
-                    <dd>Building web applications that offer a native app-like experience, including offline capabilities.</dd>
-                    <dt>8. Code Splitting</dt>
-                    <dd>Breaking down your bundled JavaScript into smaller files, loaded on demand for optimized performance.</dd>
-                    <dt>9. React Hooks in Depth</dt>
-                    <dd>Exploring advanced use cases and patterns with React hooks.</dd>
-                    <dt>10. Testing React Applications</dt>
-                    <dd>Writing tests for React components and applications using tools like Jest and React Testing Library.</dd>
+                    <section class="skills">
+                      <p style="text-align: center;">State Management and Enhancements <span id="SME-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="SME-progress">
+                          <div class="progress-fill" id="SME-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Advanced State and Data Handling <span id="ASDH-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="ASDH-progress">
+                          <div class="progress-fill" id="ASDH-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Performance and Advanced Techniques <span id="PAT-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="PAT-progress">
+                          <div class="progress-fill" id="PAT-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
               
@@ -479,16 +603,30 @@
                   </div>  
                   <p class="skill">Acquired a solid understanding of user experience (UX) and user interface (UI) design principles.</p>
                   <dl class="skills-list">
-                    <dt>User Experience (UX)</dt>
-                    <dd>The overall experience of a person using a product or service, focusing on aspects such as usability and satisfaction.</dd>
-                    <dt>Semantic UI</dt>
-                    <dd>A front-end development framework that uses human-friendly HTML to create responsive and customizable user interfaces.</dd>
-                    <dt>User Interface Design</dt>
-                    <dd>The process of designing the visual elements of a digital interface, including layout, typography, and visual hierarchy.</dd>
-                    <dt>Figma (Software)</dt>
-                    <dd>A collaborative design tool that allows teams to create, test, and ship better designs from start to finish.</dd>
-                    <dt>User Experience Design (UED)</dt>
-                    <dd>A broader term that encompasses the overall design process, including user interface design, interaction design, and usability.</dd>
+                         <section class="skills">
+                      <p style="text-align: center;">User Experience (UX) and Design Principles <span id="UX-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="UX-progress">
+                          <div class="progress-fill" id="UX-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Comprehensive Design Approach <span id="CD-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="CD-progress">
+                          <div class="progress-fill" id="CD-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Design Tools and Process <span id="DT-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="DT-progress">
+                          <div class="progress-fill" id="DT-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
               
@@ -511,29 +649,30 @@
           </div>
                   <p class="skill">Received preparation for technical interviews, enhancing problem-solving abilities.</p>
                   <dl class="skills-list">
-                    <dt>Data Structures</dt>
-                    <dd>Data structures are ways of organizing and storing data to perform operations efficiently. Common data structures include:</dd>
-                    <p>Arrays: A collection of elements, each identified by an index or a key.</p>
-                    <p>Linked Lists: A linear collection of elements where each element points to the next one.</p>
-                    <p>Trees: Hierarchical structures with a root element and branches leading to leaves.</p>
-                    <p>Hash Tables: A data structure that implements an associative array abstract data type, a structure that can map keys to values.</p>
-                    <p>Graphs: A set of nodes connected by edges.</p>
-                  
-                    <dt>Interview Skills Training</dt>
-                    <dd>Interview skills training involves preparing for job interviews to increase the likelihood of success. Topics include:</dd>
-                    <p>Behavioral Questions: Exploring past experiences and behaviors to predict future performance.</p>
-                    <p>Technical Questions: Assessing knowledge and problem-solving abilities related to the job.</p>
-                    <p>Problem-Solving: Approaching and solving real-world problems, often with coding challenges for technical roles.</p>
-                    <p>Communication: Effectively expressing ideas and communicating solutions.</p>
-                    <p>Soft Skills: Showcasing interpersonal skills, adaptability, and teamwork.</p>
-                  
-                    <dt>Algorithms</dt>
-                    <dd>Algorithms are step-by-step procedures or formulas for solving problems or accomplishing tasks. Common algorithms include:</dd>
-                    <p>Sorting Algorithms: Arranging elements in a specific order (e.g., quicksort, mergesort).</p>
-                    <p>Searching Algorithms: Finding a specific item in a collection (e.g., binary search).</p>
-                    <p>Graph Algorithms: Solving problems related to graphs (e.g., depth-first search, breadth-first search).</p>
-                    <p>Dynamic Programming: Optimizing recursive algorithms by storing results of subproblems (e.g., Fibonacci sequence).</p>
-                    <p>Greedy Algorithms: Making the locally optimal choice at each stage with the hope of finding a global optimum.</p>
+                    <section class="skills">
+                      <p style="text-align: center;"> Fundamental Data Structures <span id="FDS-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="FDS-progress">
+                          <div class="progress-fill" id="FDS-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Interview Skills Training <span id="IST-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="IST-progress">
+                          <div class="progress-fill" id="IST-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Algorithms Overview <span id="Algo-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="Algo-progress">
+                          <div class="progress-fill" id="Algo-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </dl>
                 </li>
               
@@ -543,7 +682,7 @@
            
              
                 <li>
-                <dl>
+                <dl class="skills-list">
                   <dt class="title" data-image="image/data.png"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48">
                     <path fill="#3f51b5" d="M48 16L48 14 40.469 14 39.809 16zM33 31L33 29 29 29 27 29 27 31zM39.766 28L40.51 26 34.51 26 35.266 28zM29 26H33V28H29zM29 23H33V25H29zM42 29L42 31 48 31 48 29 46 29zM36.181 19L35.521 17 27 17 27 19 29 19zM37.17 22L36.51 20 29 20 29 22zM33.378 23L34.133 25 40.883 25 41.628 23zM42 23H46V25H42zM27 32H33V34H27zM35.191 16L34.531 14 27 14 27 16zM36.776 32L37.531 34 38.276 32zM42 32H48V34H42zM39.479 17L38.819 19 46 19 48 19 48 17zM39.393 29L35.643 29 36.398 31 38.648 31zM42 26H46V28H42zM38.49 20L37.83 22 46 22 46 20zM0 14H8V16H0zM0 17H8V19H0zM2 20H6V22H2zM2 23H6V25H2zM2 26H6V28H2zM0 29H8V31H0zM0 32H8V34H0zM10 17H18V19H10zM24.977 16c-.913-1.208-2.347-2-3.977-2H10v2h7.023H24.977z"></path><path fill="#3f51b5" d="M25.578 17h-9.131C16.171 17.613 16 18.283 16 19h10C26 18.288 25.846 17.613 25.578 17zM23.975 23H12v2h11.973c-.833-.62-1.854-1-2.973-1C22.119 24 23.142 23.621 23.975 23zM17.023 32H10v2h11c1.63 0 3.065-.792 3.977-2H17.023zM18 29h-2-6v2h6.447H18h7.578C25.846 30.387 26 29.712 26 29H18zM21 20c0 0 0 .083 0 1s-1 1-1 1h4.979c.441-.584.77-1.257.921-2H21zM12 20H17V22H12z"></path><g><path fill="#3f51b5" d="M21 28h4.885c-.156-.738-.467-1.418-.907-2H20c0 0 1 .167 1 1S21 28 21 28zM12 26H17V28H12z"></path></g>
                     </svg> &nbsp; Data Analysis with Python:</dt>
@@ -557,14 +696,30 @@
                       </div>
                   </div>
               </div>
-          
-                  <dt>Skills gained:</dt>
-                  <dd>Pandas</dd>
-                  <dd>Numpy</dd>
-                  <dd>Machine Learning</dd>
-                  <dd>Model Development</dd>
-                  <dd>scikit-learn</dd>
-            </dl>
+                              <section class="skills">
+                      <p style="text-align: center;">Data Manipulation and Analysis <span id="DA-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="DA-progress">
+                          <div class="progress-fill" id="DA-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Data Visualization <span id="DV-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="DV-progress">
+                          <div class="progress-fill" id="DV-fill"></div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="skills">
+                      <p style="text-align: center;">Machine Learning <span id="ML-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="ML-progress">
+                          <div class="progress-fill" id="ML-fill"></div>
+                        </div>
+                      </div>
+                    </section>
           </li>
             <li style="margin-bottom: 30vh;">
             <dl>
@@ -575,8 +730,14 @@
             </div>
               <dd class="skill">
                   <ul>
-                      <p>Scikit-Learn</p>
-                      <p>Machine Learning</p>
+                    <section class="skills">
+                      <p style="text-align: center;">Sci-kit learn <span id="SK-skill">0</span>%</p>
+                      <div class="progress-container">
+                        <div class="progress-bar" id="SK-progress">
+                          <div class="progress-fill" id="SK-fill"></div>
+                        </div>
+                      </div>
+                    </section>
                   </ul>
               </dd>
             </dl>
@@ -601,13 +762,14 @@
     </div>
     <script src="https://unpkg.com/scrollreveal"></script>
         <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+        
         <script src="https://unpkg.com/typeit@8.8.0/dist/index.umd.js"></script>
        <script src="script.js"></script>
        <script>
         window.watsonAssistantChatOptions = {
           integrationID: "fe46f390-db64-49ff-adb4-662cbace2270", // The ID of this integration.
-          region: "au-syd", // The region your integration is hosted in.
-          serviceInstanceID: "d22ff2da-7a3f-40d4-9389-191d60bc1f9d", // The ID of your service instance.
+          region: "au-syd", // The region integration is hosted in.
+          serviceInstanceID: "d22ff2da-7a3f-40d4-9389-191d60bc1f9d", // The ID of service instance.
           onLoad: async (instance) => { await instance.render(); }
         };
         setTimeout(function(){
